@@ -4,6 +4,9 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 require('dotenv').config();
 
+var materialRouter = require('./routes/materials')
+var materialStockRouter = require('./routes/material-stock')
+
 var app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,3 +21,6 @@ app.get('/',(req,res)=>{
     console.log('You are not allowed to be here');
     res.send('You are not allowed to be here');
 })
+
+app.use('/materials', materialRouter);
+app.use('/materialstock', materialStockRouter);
