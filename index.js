@@ -9,6 +9,7 @@ var materialStockRouter = require('./routes/material-stock')
 var customersRouter = require('./routes/customers')
 var employeeRolesRouter = require('./routes/employee-roles')
 var employeesRouter = require('./routes/employees')
+var businessTypeRouter = require('./routes/business-type')
 
 var app = express();
 app.use(cors());
@@ -30,3 +31,4 @@ app.use('/materialstock', materialStockRouter);
 app.use('/customers', customersRouter);
 app.use('/employee-roles', employeeRolesRouter);
 app.use('/employees', employeesRouter);
+app.use('/business-type', businessTypeRouter);
