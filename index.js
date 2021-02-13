@@ -6,6 +6,7 @@ require('dotenv').config();
 
 var materialRouter = require('./routes/materials')
 var materialStockRouter = require('./routes/material-stock')
+var customersRouter = require('./routes/customers')
 
 var app = express();
 app.use(cors());
@@ -24,3 +25,4 @@ app.get('/',(req,res)=>{
 
 app.use('/materials', materialRouter);
 app.use('/materialstock', materialStockRouter);
+app.use('/customers', customersRouter);
