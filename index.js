@@ -11,6 +11,7 @@ var employeeRolesRouter = require('./routes/employee-roles')
 var employeesRouter = require('./routes/employees')
 var businessTypeRouter = require('./routes/business-type')
 var productCategoryRouter = require('./routes/product-category')
+var productionRouter = require('./routes/production')
 
 var app = express();
 app.use(cors());
@@ -33,3 +34,4 @@ app.use('/customers', customersRouter);
 app.use('/employee-roles', employeeRolesRouter);
 app.use('/employees', employeesRouter);
 app.use('/product-category', productCategoryRouter);
+app.use('/production', productionRouter);
